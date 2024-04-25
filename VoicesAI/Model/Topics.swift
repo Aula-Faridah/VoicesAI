@@ -8,13 +8,19 @@
 import Foundation
 
 enum Topics: String, CaseIterable {
-    case persahabatan
-    case cinta
-    case motivasi
-    case horor
+    case persahabatan = "Persahabatan"
+    case romantis = "Romantis"
+    case motivasi = "Motivasi"
+    case horor = "Horror"
+    case film = "Film"
+    case kartun = "Kartun"
 }
 
 enum Mood: String, CaseIterable {
-    case bahagia
-    case sedih
+    case bahagia = "Bahagia"
+    case sedih = "Sedih"
+    case marah = "Marah"
+    case takut = "Takut"
+    case jijik = "Jijik"
+    case terkejut = "Terkejut"
 }

@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct StoriesView: View {
+    @StateObject private var storyVM = StoryVM()
+    
     @State private var selectedTopic: Topics = .persahabatan
     @State private var selectedMood: Mood = .bahagia
     
-    @State private var todayStory: String = ""
+//    @State private var todayStory: String = ""
     
     
     var body: some View {
@@ -46,11 +48,15 @@ struct StoriesView: View {
                 
                 // MARK: -TEXT EDITOR
                 Section {
-                    TextEditor(text: $todayStory)
+                    TextEditor(text: $storyVM.storyText)
                         .frame(height: 200)
                         .font(.system(.caption, design: .rounded))
                         .fontWeight(.bold)
                         .foregroundStyle(.blue)
+                        .disabled(storyVM.isLoading)
+                        .overlay{
+                            storyVM.isLoading ? ProgressView() : nil
+                        }
                 } header: {
                     Text("Today's story")
                 } footer: {
@@ -59,11 +65,17 @@ struct StoriesView: View {
                 
                 // MARK: -BUTTON GENERATE
                 Button(action: {
-                    
+                    Task{
+                        await storyVM.generateStory(topic: selectedTopic, mood: selectedMood)
+                    }
                 }, label: {
-                    Text("Generate".uppercased())
-                        .font(.system(.callout, design: .rounded))
-                        .fontWeight(.bold)
+                    if storyVM.isLoading {
+                        ProgressView().scaleEffect(1)
+                    } else {
+                        Text(storyVM.storyText.isEmpty ? "Generate".uppercased() : "Speech".uppercased())
+                            .font(.system(.callout, design: .rounded))
+                            .fontWeight(.bold)
+                    }
                 })
                 .buttonStyle(PlainButtonStyle())
                 .frame(minWidth: 0, maxWidth: .infinity)
@@ -79,3 +91,4 @@ struct StoriesView: View {
 #Preview {
     StoriesView()
 }
+
