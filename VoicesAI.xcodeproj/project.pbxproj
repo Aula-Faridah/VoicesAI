@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52942D452BD9FCA3006E3202 /* StoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52942D442BD9FCA3006E3202 /* StoryVM.swift */; };
 		52D052A62BD8DBAC00337715 /* VoicesAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052A52BD8DBAC00337715 /* VoicesAIApp.swift */; };
 		52D052A82BD8DBAC00337715 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052A72BD8DBAC00337715 /* ContentView.swift */; };
 		52D052AA2BD8DBB000337715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D052A92BD8DBB000337715 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52942D442BD9FCA3006E3202 /* StoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVM.swift; sourceTree = "<group>"; };
 		52D052A22BD8DBAC00337715 /* VoicesAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoicesAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D052A52BD8DBAC00337715 /* VoicesAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesAIApp.swift; sourceTree = "<group>"; };
 		52D052A72BD8DBAC00337715 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52942D432BD9FC88006E3202 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52942D442BD9FCA3006E3202 /* StoryVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		52D052992BD8DBAC00337715 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +69,7 @@
 		52D052A42BD8DBAC00337715 /* VoicesAI */ = {
 			isa = PBXGroup;
 			children = (
+				52942D432BD9FC88006E3202 /* ViewModel */,
 				52D052BD2BD8F51C00337715 /* Services */,
 				52D052B62BD8DC3400337715 /* Model */,
 				52D052B32BD8DBEE00337715 /* App */,
@@ -190,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D052BC2BD8DCE800337715 /* SettingsView.swift in Sources */,
+				52942D452BD9FCA3006E3202 /* StoryVM.swift in Sources */,
 				52D052BA2BD8DCD400337715 /* StoriesView.swift in Sources */,
 				52D052B82BD8DC4000337715 /* Topics.swift in Sources */,
 				52D052A82BD8DBAC00337715 /* ContentView.swift in Sources */,
