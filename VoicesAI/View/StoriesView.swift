@@ -48,7 +48,7 @@ struct StoriesView: View {
                 
                 // MARK: -TEXT EDITOR
                 Section {
-                    TextEditor(text: $storyVM.storyText)
+                    TextEditor(text: $storyVM.displayedStoryText)
                         .frame(height: 200)
                         .font(.system(.caption, design: .rounded))
                         .fontWeight(.bold)
