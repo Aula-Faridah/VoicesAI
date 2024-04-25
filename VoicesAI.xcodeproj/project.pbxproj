@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		527476552BDA365200D9D071 /* ElevenLabsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527476542BDA365200D9D071 /* ElevenLabsService.swift */; };
+		527476572BDA3CCA00D9D071 /* SpeechVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527476562BDA3CCA00D9D071 /* SpeechVM.swift */; };
 		52942D452BD9FCA3006E3202 /* StoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52942D442BD9FCA3006E3202 /* StoryVM.swift */; };
 		52942D482BD9FD31006E3202 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 52942D472BD9FD31006E3202 /* GoogleGenerativeAI */; };
 		52D052A62BD8DBAC00337715 /* VoicesAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052A52BD8DBAC00337715 /* VoicesAIApp.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		527476542BDA365200D9D071 /* ElevenLabsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevenLabsService.swift; sourceTree = "<group>"; };
+		527476562BDA3CCA00D9D071 /* SpeechVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechVM.swift; sourceTree = "<group>"; };
 		52942D442BD9FCA3006E3202 /* StoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVM.swift; sourceTree = "<group>"; };
 		52D052A22BD8DBAC00337715 /* VoicesAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoicesAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D052A52BD8DBAC00337715 /* VoicesAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesAIApp.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				52942D442BD9FCA3006E3202 /* StoryVM.swift */,
+				527476562BDA3CCA00D9D071 /* SpeechVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D052BC2BD8DCE800337715 /* SettingsView.swift in Sources */,
+				527476572BDA3CCA00D9D071 /* SpeechVM.swift in Sources */,
 				52942D452BD9FCA3006E3202 /* StoryVM.swift in Sources */,
 				52D052BA2BD8DCD400337715 /* StoriesView.swift in Sources */,
 				52D052B82BD8DC4000337715 /* Topics.swift in Sources */,
