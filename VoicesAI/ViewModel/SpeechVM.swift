@@ -20,12 +20,12 @@ class SpeechVM: NSObject, ObservableObject, AVAudioPlayerDelegate {
     // MARK: -GENERATE AND PLAY SPEECH
     func generateAndPlaySpeech(from text: String, apiKey: String) async {
         isLoading = true
-        defer {
-            isLoading = false
-        }
-        defer {
-            isPlaying = false
-        }
+//        defer {
+//            isLoading = false
+//        }
+//        defer {
+//            isPlaying = false
+//        }
         errorMessage = nil
         
         elevenLabsService = ElevenLabsService(apiKey: apiKey)
@@ -33,6 +33,8 @@ class SpeechVM: NSObject, ObservableObject, AVAudioPlayerDelegate {
         do {
             guard let audioData = try await elevenLabsService?.generateSpeech(for: text) else {
                 errorMessage = "Failed to generate audio data."
+                isLoading = false
+                isPlaying = true
                 print(errorMessage!)
                 return
             }
@@ -40,6 +42,8 @@ class SpeechVM: NSObject, ObservableObject, AVAudioPlayerDelegate {
             playAudio(from: audioData)
         } catch {
             print("Error generating or playing speech: \(error)")
+            isPlaying = false
+            isLoading = false
         }
     }
 }
@@ -52,8 +56,11 @@ extension SpeechVM {
             audioPlayer?.delegate = self
             isPlaying = true
             audioPlayer?.play()
+            isLoading = false
         } catch {
-            print("Audio player error: \(error)")
+            print("Audio player error: \(error.localizedDescription)")
+            isPlaying = false
+            isLoading = false
         }
     }
 }

@@ -17,7 +17,7 @@ struct Constant {
     }
     
     enum VoiceID: String {
-        case sallyFord = "IMaRqUzeNVCT6ks9SI4Y"
+        case sallyFord = "kBag1HOZlaVBH7ICPE8x"
         case albertBanoy = "E01VVAfDdpbHObuCs5NH"
     }
     
